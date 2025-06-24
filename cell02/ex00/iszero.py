@@ -9,3 +9,5 @@ def check_Number(x):
         print("This number is different from zero.")
 
 check_Number(x)
+
+input("\nPress Enter to exit program")
