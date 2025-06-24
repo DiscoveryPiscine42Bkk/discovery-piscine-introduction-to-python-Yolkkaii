@@ -5,9 +5,15 @@ y = int(input("Input the second number: "))
 #function to multiply two numbers
 def multiply(x, y):
     result = x * y
-    return result
+    print(f"{x} * {y} = {result}")
+    if result > 0:
+        print("The result is positive.")
+    elif result < 0:
+        print("The result is negative.")
+    elif result == 0:
+        print("The result is positive and negative.")
 
-#print the result
-print(f"The result is: {multiply(x, y)}")
+#run the function
+multiply(x, y)
 
 input("\nPress Enter to exit the program")
