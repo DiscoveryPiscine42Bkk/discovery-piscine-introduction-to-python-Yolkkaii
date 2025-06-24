@@ -12,4 +12,3 @@ def check_Number(x):
 
 check_Number(x)
 
-input("\nPress Enter to exit program")

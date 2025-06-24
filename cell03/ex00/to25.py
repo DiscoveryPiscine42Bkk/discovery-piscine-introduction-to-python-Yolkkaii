@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 #variable for a number less than 25
 number = int(input("Input a number less then 25: "))
 
@@ -12,5 +14,3 @@ def check_number(number):
 
 #call the function
 check_number(number)
-
-input("\nPress Enter to exit the program")

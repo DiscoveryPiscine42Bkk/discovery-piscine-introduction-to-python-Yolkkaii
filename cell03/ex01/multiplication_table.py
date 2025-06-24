@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 #variable to get the number
 number = int(input("Input a number: "))
 
@@ -10,5 +12,3 @@ def multiplication_table(number):
 
 #call the function
 multiplication_table(number)
-
-input("\nPress Enter to exit the program")

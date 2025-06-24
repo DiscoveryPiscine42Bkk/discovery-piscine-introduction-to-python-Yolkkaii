@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 #variable for the password
 password = "SuperSecret123"
 
@@ -14,4 +16,3 @@ def check_Password(inputPW):
 #run the function with user's input
 check_Password(inputPW)
 
-input("\nPress Enter to exit the program")

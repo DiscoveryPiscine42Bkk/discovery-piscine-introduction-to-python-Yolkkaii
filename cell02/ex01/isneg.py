@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 #get the user's input
 x = int(input("Input a number: "))
 
@@ -13,4 +15,3 @@ def check_Number(x):
 #run the function with the user's input (x) as the argument
 check_Number(x)
 
-input("Press Enter to exit the program")

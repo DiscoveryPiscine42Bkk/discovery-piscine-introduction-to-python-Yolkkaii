@@ -1,5 +1,7 @@
+#!/usr/bin/env python3
 x = 0
 
+#while loop to print the multiplication table
 while x <= 10:
     text = str(f"Table de {x}: ")
     y = 0
