@@ -12,3 +12,5 @@ def check_Number(x):
 
 #run the function with the user's input (x) as the argument
 check_Number(x)
+
+input("Press Enter to exit the program")
