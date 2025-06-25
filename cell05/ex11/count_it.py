@@ -2,15 +2,12 @@
 
 import sys
 
-def count_param():
-    if len(sys.argv) < 2:
-        print("None")
-        sys.exit(1)
-    
-    print(f"parameters: {len(sys.argv) - 1}")
+if len(sys.argv) < 2:
+    print("None")
+    sys.exit(0)
 
-    for i in range(1, len(sys.argv)):
-        param = sys.argv[i]
-        print(f"{param}: {len(param)}")
+print(f"parameters: {len(sys.argv) - 1}")
 
-count_param()
+for i in range(1, len(sys.argv)):
+    param = sys.argv[i]
+    print(f"{param}: {len(param)}")

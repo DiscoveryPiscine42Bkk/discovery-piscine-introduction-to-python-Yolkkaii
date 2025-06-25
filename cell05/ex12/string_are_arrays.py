@@ -2,15 +2,16 @@
 
 import sys
 
-def count_string():
-    if len(sys.argv) != 2 or "z" not in sys.argv[1]:
+if len(sys.argv) != 2:
+    print("None")
+    sys.exit(0)
+else:
+    string_to_check = sys.argv[1]
+
+    if "z" not in string_to_check:
         print("None")
-        sys.exit(1)
-
-    to_find = "z"
-    string = sys.argv[1]
-    count = string.count(to_find)
-    
-    print(count)
-
-count_string()
+        sys.exit(0)
+    else:
+        to_find = "z"
+        count = string_to_check.count(to_find)
+        print(count)

@@ -4,17 +4,12 @@
 x = int(input("Input the first number: "))
 y = int(input("Input the second number: "))
 
-#function to multiply two numbers
-def multiply(x, y):
-    result = x * y
-    print(f"{x} x {y} = {result}")
-    if result > 0:
-        print("The result is positive.")
-    elif result < 0:
-        print("The result is negative.")
-    elif result == 0:
-        print("The result is positive and negative.")
+result = x * y
+print(f"{x} x {y} = {result}")
 
-#run the function
-multiply(x, y)
-
+if result > 0:
+    print("The result is positive.")
+elif result < 0:
+    print("The result is negative.")
+else:
+    print("The result is positive and negative.")

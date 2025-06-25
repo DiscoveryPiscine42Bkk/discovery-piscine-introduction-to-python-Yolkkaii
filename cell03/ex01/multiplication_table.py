@@ -3,12 +3,8 @@
 #variable to get the number
 number = int(input("Input a number: "))
 
-#function to print the multiplication table
-def multiplication_table(number):
-    multNum = 0
-    while multNum <= 9:
-        print(f"{number} x {multNum} = {number * multNum}")
-        multNum += 1
+multNum = 0
 
-#call the function
-multiplication_table(number)
+while multNum <= 9:
+    print(f"{number} x {multNum} = {number * multNum}")
+    multNum += 1
