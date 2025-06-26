@@ -38,7 +38,7 @@ def check_pawn(pawn_row, pawn_col, K_pos, board, size):
             return True
     return False
 
-# -- creative functionality -- function for adding a knight piece (N = knight since K = king)
+# -- creative functionality, function for adding a knight piece (N = knight since K = king) -- #
 def check_knight(knight_row, knight_col, K_pos, board, size):
     offset = [(-2, -1), (-2, 1), (-1, -2), (-1, 2), (1, -2), (1, 2), (2, -1), (2, 1)]
 
