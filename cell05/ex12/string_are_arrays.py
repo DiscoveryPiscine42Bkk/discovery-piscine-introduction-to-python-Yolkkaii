@@ -14,4 +14,4 @@ else:
     else:
         to_find = "z"
         count = string_to_check.count(to_find)
-        print(count)
+        print("z" * count)
