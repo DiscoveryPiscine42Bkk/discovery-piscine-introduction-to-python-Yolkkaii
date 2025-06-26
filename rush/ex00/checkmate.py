@@ -12,12 +12,12 @@ def check_attack_dir(piece_row, piece_col, K_pos, board, size, direction):
     for direction_row, direction_col in direction:
         row, col = piece_row + direction_row, piece_col + direction_col
         
-        #finds the king while the direction is within the board
+        #finds the king while the direction is within the chess board
         while is_valid(row, col, size):
             if board[row][col] == 'K':
                 return True
             
-            #break if outside of board
+            #break if outside of chess board
             elif board[row][col] != '.': 
                 break
             
@@ -38,24 +38,24 @@ def check_pawn(pawn_row, pawn_col, K_pos, board, size):
             return True
     return False
 
-#main function that check for errors, king's position on the board and confirms if the king is in check
+#main function that check for errors, king's position on the chess board and confirms if the king is in check
 def checkmate(board_str):
-    #removes whitespace from the board (because the board is multi line)
+    #removes whitespace from the chess board (because the board is multi line)
     rows = board_str.strip().split('\n')
 
-    #checks if board is empty
+    #checks if chess board is empty
     if not rows or (len(rows) == 1 and not rows[0]):
         return 
     
     board_size = -1 #-1 because board size is not inputted yet
-    board = [] #list for presenting the board
+    board = [] #list for presenting the chess board in funcions
 
     for row_str in rows:
         #skip whitespace lines
         if not row_str.strip():
             continue
     
-        #determine board size using first row
+        #determine chess board size using first row
         if board_size == -1:
             board_size = len(row_str)
             if board_size == 0:
@@ -70,7 +70,7 @@ def checkmate(board_str):
         #append the row as a list of char
         board.append(list(row_str)) 
     
-    #if no board exist, return
+    #if no chess board exist, return
     if not board:
         print("Error")
         return
