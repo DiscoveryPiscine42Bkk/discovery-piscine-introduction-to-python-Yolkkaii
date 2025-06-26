@@ -55,14 +55,14 @@ def checkmate(board_str):
         if not row_str.strip():
             continue
     
-        #determine board size from first row
+        #determine board size using first row
         if board_size == -1:
             board_size = len(row_str)
             if board_size == 0:
                 print("Error")
                 return
 
-        #checks if the amout of rows is equal to the board size
+        #checks each row to see if it's size is equal to the board size (aka first row size)
         if len(row_str) != board_size:
             print("Error")
             return
@@ -128,4 +128,3 @@ def checkmate(board_str):
                 
     #fails if no king is found in the path
     print("Fail")
-    
