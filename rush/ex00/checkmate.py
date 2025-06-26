@@ -128,3 +128,4 @@ def checkmate(board_str):
                 
     #fails if no king is found in the path
     print("Fail")
+    
