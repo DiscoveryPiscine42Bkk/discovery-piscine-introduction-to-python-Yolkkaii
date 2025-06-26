@@ -30,13 +30,26 @@ def check_attack_dir(piece_row, piece_col, K_pos, board, size, direction):
 def check_pawn(pawn_row, pawn_col, K_pos, board, size):
     offset = [(-1, -1), (-1, 1)]
 
-    #check if king is in pawn attack path
+    #check if king is in pawn's attack path
     for direction_row, direction_col in offset:
         row, col = pawn_row + direction_row, pawn_col + direction_col
 
         if is_valid(row, col, size) and (row, col) == K_pos:
             return True
     return False
+
+# -- creative functionality -- function for adding a knight piece (N = knight since K = king)
+def check_knight(knight_row, knight_col, K_pos, board, size):
+    offset = [(-2, -1), (-2, 1), (-1, -2), (-1, 2), (1, -2), (1, 2), (2, -1), (2, 1)]
+
+    #check if king is in the knight's attack path
+    for direction_row, direction_col in offset:
+        row, col = knight_row + direction_row, knight_col + direction_col
+
+        if is_valid(row, col, size) and (row, col) == K_pos:
+            return True
+    return False
+
 
 #main function that check for errors, king's position on the board and confirms if the king is in check
 def checkmate(board_str):
@@ -121,5 +134,11 @@ def checkmate(board_str):
                 if check_pawn(row, col, K_pos, board, board_size):
                     print("Success")
                     return
+                
+            elif piece == "N":
+                if check_knight(row, col, K_pos, board, board_size):
+                    print("Success")
+                    return
+                
     #fails if no king is found in the path
     print("Fail")
