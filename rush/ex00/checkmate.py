@@ -45,6 +45,7 @@ def checkmate(board_str):
 
     #checks if chess board is empty
     if not rows or (len(rows) == 1 and not rows[0]):
+        print("Error")
         return 
     
     board_size = -1 #-1 because board size is not inputted yet
