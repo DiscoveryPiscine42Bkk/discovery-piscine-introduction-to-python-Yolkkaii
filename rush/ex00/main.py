@@ -1,9 +1,5 @@
 from checkmate import checkmate
 
-import sys
-
-
-
 def main():
     board1 = """\
 R...
